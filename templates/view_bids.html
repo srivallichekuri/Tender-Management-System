@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>View Bids</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Submitted Bids</h1>
+
+    {% for bid in bids %}
+
+        <h2>Contractor: {{ bid[1] }}</h2>
+
+        <p>Bid Amount: {{ bid[3] }}</p>
+
+        <p>Proposal: {{ bid[4] }}</p>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+
+</html>

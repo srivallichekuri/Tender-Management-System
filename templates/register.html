@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Register</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Contractor Registration</h1>
+
+    <form method="POST">
+
+        <input type="text"
+        name="username"
+        placeholder="Enter Username"
+        required>
+
+        <br><br>
+
+        <input type="password"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        required>
+
+        <br><br>
+
+        <p id="message"></p>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <script>
+
+        const password = document.getElementById("password");
+        const message = document.getElementById("message");
+
+        password.addEventListener("input", function() {
+
+            let value = password.value;
+
+            if (value.length < 8) {
+                message.innerHTML =
+                "Password must contain at least 8 characters";
+                message.style.color = "red";
+            }
+
+            else if (!/[A-Z]/.test(value)) {
+                message.innerHTML =
+                "Password must contain a capital letter";
+                message.style.color = "red";
+            }
+
+            else if (!/[a-z]/.test(value)) {
+                message.innerHTML =
+                "Password must contain a small letter";
+                message.style.color = "red";
+            }
+
+            else if (!/[0-9]/.test(value)) {
+                message.innerHTML =
+                "Password must contain a number";
+                message.style.color = "red";
+            }
+
+            else if (!/[@$!%*?&]/.test(value)) {
+                message.innerHTML =
+                "Password must contain a special character";
+                message.style.color = "red";
+            }
+
+            else {
+                message.innerHTML =
+                "Strong Password ✓";
+                message.style.color = "green";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

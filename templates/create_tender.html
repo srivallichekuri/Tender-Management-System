@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Create Tender</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Create Tender</h1>
+
+    <form method="POST">
+
+        <input type="text" name="title" placeholder="Tender Title">
+        <br><br>
+
+        <input type="number" name="budget" placeholder="Budget">
+        <br><br>
+
+        <input type="date" name="deadline">
+        <br><br>
+
+        <button type="submit">Create Tender</button>
+
+    </form>
+
+</body>
+</html>

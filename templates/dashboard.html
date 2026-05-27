@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Admin Dashboard</h1>
+
+    <p>Welcome to Tender Management Dashboard</p>
+
+    <a href="/create_tender">
+        <button>Create Tender</button>
+    </a>
+
+    <br><br>
+
+    <a href="/view_tenders/admin">
+        <button>View Tenders</button>
+    </a>
+
+</body>
+
+</html>
