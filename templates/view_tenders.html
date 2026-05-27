@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Tenders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>All Tenders</h1>
+
+    {% for tender in tenders %}
+
+    <div class="tender-card">
+
+        <h2>{{ tender[1] }}</h2>
+
+        <p><strong>Budget:</strong> {{ tender[2] }}</p>
+
+        <p><strong>Deadline:</strong> {{ tender[3] }}</p>
+
+        {% if role == "admin" %}
+
+            <a href="/delete_tender/{{ tender[0] }}">
+                <button>Delete</button>
+            </a>
+
+            <a href="/view_bids/{{ tender[0] }}">
+                <button>View Bids</button>
+            </a>
+
+        {% elif role == "contractor" %}
+
+            <a href="/bid/{{ tender[0] }}">
+                <button>Bid</button>
+            </a>
+
+        {% endif %}
+
+    </div>
+
+    {% endfor %}
+
+</body>
+</html>
