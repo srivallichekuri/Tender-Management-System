@@ -1,7 +1,7 @@
-Tender Management System
+Tender Management System:
 A web-based Tender Management System developed using Flask and SQLite that allows admins to create and manage tenders while contractors can view and bid on available tenders.
 
-Features
+Features:
 User Registration and Login
 Role-Based Access Control
 Admin
@@ -15,7 +15,7 @@ SQLite Database Integration
 Password Validation
 Public Deployment using Render
 
-Technologies Used
+Technologies Used:
 Python
 Flask
 SQLite
@@ -24,25 +24,25 @@ CSS
 GitHub
 Render
 
-Cybersecurity Features
+Cybersecurity Features:
 Authentication System
 Role-Based Authorization
 Password Strength Validation
 Database Access Restrictions
 Secure Route Handling
 
-Project Workflow
+Project Workflow:
 1. Admin logs into the system
 2. Admin creates tenders
 3. Contractors view available tenders
 4. Contractors submit bids
 5. Admin reviews submitted bids
 
-Deployment
+Deployment:
 Live Project: [Tender Management System Live Project](https://tender-management-1kgl.onrender.com?utm_source=chatgpt.com)
 GitHub Repository: [Tender Management System GitHub Repository](https://github.com/srivallichekuri/Tender-Management-System?utm_source=chatgpt.com)
 
-Future Enhancements
+Future Enhancements:
 Password Hashing
 Email Notifications
 OTP Verification
